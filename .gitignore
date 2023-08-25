@@ -1,0 +1,10 @@
+/.DS_Store
+/reactive-common-functions/.DS_Store
+/reactive-data-service/.DS_Store
+/reactive-persistence/.DS_Store
+/reactive-web/.DS_Store
+/.idea/
+/reactive-common-functions/target/
+/reactive-data-service/target/
+/reactive-persistence/target/
+/reactive-web/target/
