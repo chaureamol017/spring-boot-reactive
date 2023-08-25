@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      database: DEMO_REACTIVE
+      host: localhost
+      port: 27017
+#      username: root
+#      password: demo_root_pw
