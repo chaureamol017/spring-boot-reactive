@@ -24,6 +24,7 @@
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>-->
 <!--        </dependency>-->
+<!--        todo: remove from child pom -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
