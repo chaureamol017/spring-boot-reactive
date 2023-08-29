@@ -35,7 +35,7 @@ public class ReactiveUserController {
     }
 
     @GetMapping("/{id}")
-    public Mono<UserModel> getUser(@PathVariable Long id) {
+    public Mono<UserModel> getUser(@PathVariable String id) {
         return reactiveUserService.getUser(id);
     }
 
@@ -50,7 +50,7 @@ public class ReactiveUserController {
     }
 
     @DeleteMapping("/{id}")
-    public Mono<Void> deleteUser(@PathVariable Long id) {
+    public Mono<Void> deleteUser(@PathVariable String id) {
         return reactiveUserService.deleteUser(id);
     }
 

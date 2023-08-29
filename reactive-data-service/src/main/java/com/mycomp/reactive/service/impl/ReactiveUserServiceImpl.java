@@ -23,7 +23,7 @@ public class ReactiveUserServiceImpl implements ReactiveUserService {
     }
 
     @Override
-    public Mono<UserModel> getUser(Long id) {
+    public Mono<UserModel> getUser(final String id) {
         final Mono<User> userMono = userRepository.findById(id);
         return userMono.map(adapter::toModel);
     }
@@ -43,7 +43,7 @@ public class ReactiveUserServiceImpl implements ReactiveUserService {
     }
 
     @Override
-    public Mono<Void> deleteUser(Long id) {
+    public Mono<Void> deleteUser(String id) {
         return userRepository.deleteById(id);
     }
 

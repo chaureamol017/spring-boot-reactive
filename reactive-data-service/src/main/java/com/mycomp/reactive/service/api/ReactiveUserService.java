@@ -7,9 +7,9 @@ import reactor.core.publisher.Mono;
 public interface ReactiveUserService {
 
     Flux<UserModel> getAllUsers();
-    Mono<UserModel> getUser(Long id);
+    Mono<UserModel> getUser(String id);
     Mono<UserModel> saveUser(Mono<UserModel> userModelMono);
     Mono<UserModel> updateUser(Mono<UserModel> userModelMono);
-    Mono<Void> deleteUser(Long id);
+    Mono<Void> deleteUser(String id);
 
 }

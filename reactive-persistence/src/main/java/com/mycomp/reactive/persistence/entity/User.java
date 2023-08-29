@@ -3,12 +3,12 @@ package com.mycomp.reactive.persistence.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "user")
+@Document(collection = "user")
 public class User {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private Long userId;
+    private String userId;
     private String name;
 //    private String firstName;
 //    private String middleName;
@@ -17,16 +17,16 @@ public class User {
 //    private String mobile;
 
 
-    public User(Long userId, String name) {
+    public User(String userId, String name) {
         this.userId = userId;
         this.name = name;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

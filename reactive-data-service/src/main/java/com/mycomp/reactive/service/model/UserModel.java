@@ -2,22 +2,22 @@ package com.mycomp.reactive.service.model;
 
 public class UserModel {
 
-    private Long userId;
+    private String userId;
     private String name;
 
     public UserModel() {
     }
 
-    public UserModel(Long userId, String name) {
+    public UserModel(String userId, String name) {
         this.userId = userId;
         this.name = name;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

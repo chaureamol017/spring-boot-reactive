@@ -16,7 +16,8 @@ public class UserDao {
         return LongStream.rangeClosed(1, 10)
                 .peek(index -> System.out.println("Processing count: " + index))
                 .peek(index -> ThreadSleeper.sleepExecution(500))
-                .mapToObj(index -> new User(index, "New User " + index))
+//                .mapToObj(index -> new User(index, "New User " + index))
+                .mapToObj(index -> new User(String.valueOf(index), "New User " + index))
                 .collect(Collectors.toList());
     }
 
@@ -24,12 +25,14 @@ public class UserDao {
         return Flux.range(1, 10)
                 .delayElements(Duration.ofMillis(500))
                 .doOnNext(index -> System.out.println("Stream processing count: " + index))
-                .map(index -> new User((long) index, "New User " + index));
+//                .map(index -> new User((long) index, "New User " + index));
+                .map(index -> new User(String.valueOf(index), "New User " + index));
     }
 
     public Flux<User> getAllUserList() {
         return Flux.range(1, 10)
                 .doOnNext(index -> System.out.println("Stream processing count: " + index))
-                .map(index -> new User((long) index, "New User " + index));
+//                .map(index -> new User((long) index, "New User " + index));
+                .map(index -> new User(String.valueOf(index), "New User " + index));
     }
 }

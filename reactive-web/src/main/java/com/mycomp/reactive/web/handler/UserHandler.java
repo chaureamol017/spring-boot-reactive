@@ -20,7 +20,8 @@ public class UserHandler {
     }
 
     public Mono<ServerResponse> findUser(ServerRequest request) {
-        Long id = Long.parseLong(request.pathVariable("id"));
+//        final Long id = Long.parseLong(request.pathVariable("id"));
+        final String id = request.pathVariable("id");
 
         final Mono<User> userMono = userDao.getAllUserList().filter(user -> user.getUserId() == id).next();
 
